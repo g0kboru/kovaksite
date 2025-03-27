@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOVAK | Sabit Kanatlı SİHA</title>
+  <style>
+    /* Varsayılan açık tema */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: white;
+      color: #333;
+    }
+    
+    header {
+      background-color: #691414;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    nav a {
+      color: rgb(255, 255, 255);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .logo {
+      height: 60px;
+    }
+    
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    
+    h2 {
+      border-bottom: 2px solid #691414;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    
+    .faq-item h4 {
+      margin: 10px 0 5px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    th, td {
+      padding: 10px;
+      border: 1px solid #691414;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #691414;
+      color: white;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #e63946;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    
+    .button:hover {
+      background-color: #d32f2f;
+    }
+    
+    /* Karanlık tema */
+    body.dark-mode {
+      background-color: #333;
+      color: white;
+    }
+    
+    body.dark-mode header {
+      background-color: #691414;
+    }
+    
+    body.dark-mode .button {
+      background-color: #e63946;
+    }
+
+    body.dark-mode .button:hover {
+      background-color: #d32f2f;
+    }
+
+    /* Tema geçiş düğmesi */
+    .theme-toggle {
+      background-color: #691414;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .theme-toggle:hover {
+      background-color: #e63946;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="KOVAK.jpg" alt="KOVAK Logo" class="logo">
+    <nav>
+      <a href="#anasayfa">Ana Sayfa</a>
+      <a href="#teknik">Teknik Özellikler</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#iletisim">İletişim</a>
+      <a href="#sss">SSS</a>
+    </nav>
+    <button class="theme-toggle" onclick="toggleTheme()">Tema Değiştir</button>
+  </header>
+
+  <section id="anasayfa">
+    <h2>Ana Sayfa</h2>
+    <p><strong>KOVAK</strong>, tamamen özgün tasarıma sahip sabit kanatlı bir SİHA’dır. Hafif ve dayanıklı kompozit gövdesi, NACA 23012 kanat profili ve kanard sistemi ile yüksek manevra kabiliyeti sağlar. 1.4 metre uzunluk, 1.1 metre kanat açıklığı ile hem dayanıklılık hem de aerodinamik verimlilik sunar. Görev odaklı mimarisi, ileri seviye görüntü işleme ve otonom kontrol sistemleri ile birleşerek çok amaçlı kullanım imkânı tanır.</p>
+    <a href="http://127.0.0.1:3000/kovak/detayli.html" class="button">Detaylı Bilgi</a>
+  </section>
+
+  <section id="teknik">
+    <h2>Teknik Özellikler</h2>
+    <table>
+      <tr><th>Özellik</th><th>Açıklama</th></tr>
+      <tr><td>Gövde ve Yapı</td><td>Kompozit malzeme, hafif ve sağlam. NACA 23012 profil, kanard sistemi ile yüksek manevra.</td></tr>
+      <tr><td>Boyutlar</td><td>Uzunluk: 1.4 m, Kanat açıklığı: 1.1 m, Gövde eni: 300 mm (kanatsız), 700 mm (kanatlı)</td></tr>
+      <tr><td>İniş/Kalkış Sistemi</td><td>Üç tekerlekli sabit iniş takımı, 15 m kalkış mesafesi, 3° iniş eğimi, süspansiyon ve koruyucu kızak</td></tr>
+      <tr><td>İtki Sistemi</td><td>Dr. Mad Thrust 90mm EDF + 15x6 karbon pervane, 24V ile 4.5 kg statik itki</td></tr>
+      <tr><td>Batarya</td><td>2x 6S 10.000 mAh Li-Po, 25C, 20 dakika uçuş süresi, 2C hızında şarj</td></tr>
+      <tr><td>Otopilot</td><td>Pixhawk Cube Orange+, STM32F7, 3x IMU, ArduPilot, PID ayarları, GPS, pusula, barometre, airspeed sensörleri</td></tr>
+      <tr><td>Görüntüleme Sistemi</td><td>12MP Raspberry Pi HQ Kamera (Sony IMX477), 160° lens, HDMI bağlantı</td></tr>
+      <tr><td>RF Sistemleri</td><td>RFD900+ (902-928 MHz, 20 km), FrSky Taranis X9D Plus (2.4 GHz)</td></tr>
+      <tr><td>Yer Kontrol Sistemi</td><td>QGroundControl + KOVAK Control Interface (Python & C++, Linux)</td></tr>
+      <tr><td>Görüntü İşleme</td><td>OpenCV + YOLOv5 + CNN, Raspberry Pi 4 + Intel Movidius NCS2, 5.8 GHz WiFi aktarım</td></tr>
+    </table>
+  </section>
+
+  <section id="galeri">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <img src="photo-placeholder1.jpg" alt="KOVAK Foto 1">
+      <img src="photo-placeholder2.jpg" alt="KOVAK Foto 2">
+      <img src="photo-placeholder3.jpg" alt="KOVAK Foto 3">
+    </div>
+  </section>
+
+  <section id="iletisim">
+    <h2>İletişim / Takım</h2>
+    <p><strong>KOVAK Takımı</strong></p>
+    <p>E-posta: gokborukovak@gmail.com</p>
+    <p>Instagram: @gokborukovak</p>
+    <p>GitHub: github.com/gokborukovak</p>
+  </section>
+
+  <section id="sss">
+    <h2>Sıkça Sorulan Sorular (SSS)</h2>
+    <div class="faq-item">
+      <h4>KOVAK hangi görevlerde kullanılabilir?</h4>
+      <p>Kamikaze görevi, hedef takibi, uçuşa yasaklı alanlardan kaçış gibi birçok senaryo için özelleştirilmiştir.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Uçuş süresi ne kadar?</h4>
+      <p>Tam şarjlı batarya ile yaklaşık 20 dakika etkili görev süresi vardır.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Hedef tespiti nasıl yapılmaktadır?</h4>
+      <p>YOLOv5 algoritması ve özel eğitilmiş CNN ile görüntü işleme yapılarak yüksek doğrulukla hedef tespiti sağlanır.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Kontrol sistemi nedir?</h4>
+      <p>Pixhawk Cube Orange+ otopilot, yer istasyonunda QGroundControl ve özel arayüz ile kontrol edilir.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 KOVAK Projesi. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
